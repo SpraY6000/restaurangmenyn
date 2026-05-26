@@ -1,0 +1,62 @@
+[
+    {
+        "id" : 1,
+        "title" : {
+            "sv": "Fläskfiléplanka",
+            "en": "Pork Tenderloin Plank Stead"
+        },
+        "price" : [149],
+        "allergies" : ["lactose", "egg"],
+        "meat" : ["pork", "beef"],
+        "description" : {
+            "sv": "Duschesse mos ...",
+            "en": "Duschesse potatoes ..."
+        }
+    },
+
+
+    {
+        "id" : 2,
+        "title" : {
+            "sv": "Biff Rydberg",
+            "en": "Biff Rydberg"
+        },
+        "price" : [175],
+        "allergies" : ["egg"],
+        "meat" : ["beef"],
+        "description" : {
+            "sv": "Tärnad oxfilé ...",
+            "en": "Diced beef tenderloin ..."
+        }
+    },
+
+    {
+        "id" : 3,
+        "title" : {
+            "sv": "Fläskfiléplanka",
+            "en": "Pork Tenderloin Plank Stead"
+        },
+        "price" : [149],
+        "allergies" : ["lactose", "egg"],
+        "meat" : ["pork", "beef"],
+        "description" : {
+            "sv": "Duschesse mos ...",
+            "en": "Duschesse potatoes ..."
+        }
+    },
+
+    {
+        "id" : 4,
+        "title" : {
+            "sv": "Fläskfiléplanka",
+            "en": "Pork Tenderloin Plank Stead"
+        },
+        "price" : [149],
+        "allergies" : ["lactose", "egg"],
+        "meat" : ["pork", "beef"],
+        "description" : {
+            "sv": "Duschesse mos ...",
+            "en": "Duschesse potatoes ..."
+        }
+    }
+]
