@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: Poppins, sans-serif;
+}
+
+header{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header img{
+    cursor: pointer;
+}
+
+body{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.imgLogoKontakt{
+    width: 75px;
+}
+
+.imgCartKontakt{
+    width: 50px;
+    height: 50px;
+}
+
+#contactField{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    gap: 10px;
+}
+
+#textArea{
+    padding: 5px;
+    resize: vertical;
+}
+
+#emailInput{
+    height: 1.5rem;
+    padding-left: 5px;
+}
+
+button{
+    margin-top: 25px;
+    height: 2rem;
+}

@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #c9a84c;
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    font-weight: 500;
+    letter-spacing: 0.16rem;
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    overflow-x: hidden;
+
+    background-color: #0f0d0a;
+    background-image: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%);
+
+}
+
+header{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(15,13,10,1);
+    width: 100%;
+    top: 0;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+main{
+    display: flex;
+}
+
+.imgLogo{
+    width: 75px;
+}
+
+.imgCart{
+    width: 50px;
+}
+
+img{
+    cursor: pointer;
+}
+
+.container{
+    
+    display: flex;
+    flex-direction: column;
+    max-width: 180ch;
+    min-width: 20px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.filter{
+    background-color: #1a1714;
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 15px;
+    width: auto;
+    min-width: 200px;
+    
+    display: flex;
+    flex-direction: column; 
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    margin-bottom: 35px;
+}
+
+.sprak{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    
+}
+
+h2{
+    margin-bottom: 10px;
+}
+
+.sprak label{
+    margin-right: 10%;
+}
+
+.rätter{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.rätter .rättBeskrivning{
+    font-size: smaller;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.rätter section{
+    background-color:#1a1714;
+    width: 100%;
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 15px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    margin-bottom: 25px;
+}
+
+.allergier{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.allergier label{
+    margin-left: 5px;
+}
+
+.sortera{
+    margin-top: 30px;
+}
+
+.sortera select{
+    width: 95%;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.container{
+    width: 100%;
+}
+
+.rätter section img{
+    width: 300;
+    height: 200px;
+    object-fit: cover;
+}
+
+.rätter section h3{
+    font-weight:light;
+}
+
+.rätter section li{
+    margin-left: 30px;
+}
+
+.cartMenu{
+    display: block;
+    background-color: #c9a84c;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 500px;
+    height: 75%;
+    position: absolute;
+    z-index: 100000;
+    top: 100px;
+    right: -600px;
+    transition: all 0.5s ease;
+}
+
+.cartMenu p{
+    font-size: larger;
+    color: rgba(15,13,10,1);
+}
+
+.cartMenu .close{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+}
+
+.cartMenu .close span{
+    color: rgba(15,13,10,1);
+}
+
+
+.addToCart{
+    width: 100%;
+    height: 2rem;
+    background-color: lightblue;
+}
+
+.buttonCon{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonCon button{
+    background-color: lime;
+    color: rgba(15,13,10,1);
+    border: 1px solid black;
+}
+
+.buttonCon button:hover{
+    background-color: rgb(0, 237, 0);
+}
+
+.buttonCon button:active{
+    background-color: rgb(0, 223, 0);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonCon select{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.vårMenyText{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+
+.sortera select{
+    background-color: rgba(15,13,10,1);
+    border: 1px solid rgba(201,168,76,0.18);
+    border-radius: 10px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+
+.breaker{
+    margin-top: 5px;
+    width: 100%;
+    height: 1px;
+    background-color: #c9a84c;
+}
+
+.maträttAllergier{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.maträttAllergier span{
+
+    display: block;
+    font-size: small;
+    background-color: rgba(201,168,76,0.18);
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
