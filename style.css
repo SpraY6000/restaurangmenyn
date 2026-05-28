@@ -1,9 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root{
+    --guld: #e1b63f;
+    --bakgrund: rgb(47, 39, 17);
+    --border: rgb(53, 44, 19);
+    --bakgrund-mörk: #1a1714;
+}
 
 *{
     margin: 0;
     padding: 0;
-    color: #c9a84c;
+    color: var(--guld);
     font-family: 'DM Sans', sans-serif;
     line-height: 1.6;
     font-weight: 500;
@@ -23,20 +43,21 @@ body{
 }
 
 header{
+    z-index: 999;
     margin-top: 25px;
     margin-bottom: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: sticky;
     background-color: rgba(15,13,10,1);
     width: 100%;
     top: 0;
     margin-top: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
 }
 
 main{
@@ -44,7 +65,17 @@ main{
 }
 
 .imgLogo{
-    width: 75px;
+    width: 100px;
+    height: 115px;
+    background: none;
+    object-fit: cover;
+}
+
+.bredden{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
 }
 
 .imgCart{
@@ -55,29 +86,33 @@ img{
     cursor: pointer;
 }
 
+#rätterLabel{
+    font-size: 1.4rem;
+}
+
 .container{
     
     display: flex;
     flex-direction: column;
     max-width: 180ch;
-    min-width: 20px;
+    min-width: 20rem;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 25px;
 }
 
 .filter{
-    background-color: #1a1714;
-    border: 1px solid rgba(201,168,76,0.18);
+    background-color: var(--bakgrund-mörk);
+    border: 1px solid var(--border);
     border-radius: 15px;
     width: auto;
     min-width: 200px;
     
     display: flex;
     flex-direction: column; 
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-bottom: 20px;
-    padding-right: 15px;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-bottom: 25px;
+    padding-right: 30px;
     margin-bottom: 35px;
 }
 
@@ -93,13 +128,13 @@ h2{
 }
 
 .sprak label{
-    margin-right: 10%;
+    margin-right: 25px;
 }
 
 .rätter{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    flex:1;
     padding-top: 15px;
     padding-bottom: 20px;
     padding-right: 15px;
@@ -117,9 +152,12 @@ h2{
 }
 
 .rätter section{
-    background-color:#1a1714;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bakgrund-mörk);
     width: 100%;
-    border: 1px solid rgba(201,168,76,0.18);
+    border: 1px solid var(--border);
     border-radius: 15px;
     padding: 0 20px;
     box-sizing: border-box;
@@ -128,12 +166,51 @@ h2{
     padding-bottom: 20px;
     padding-right: 20px;
     margin-bottom: 25px;
+    transition: transform 0.2s ease;
+}
+
+.rätter section:hover{
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+.högerRätter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.priceText{
+    font-size: 1.5rem;
+}
+
+.högerRätter button{
+    font-size: larger;
+    height: 3rem;
+    width: 4rem;
+    border-radius: 25px;
+    background-color: rgba(214, 179, 82, 0.08);
+    border: 1px solid var(--border);
+    transition: background-color 0.1s ease;
+}
+
+.högerRätter button:hover{
+    background-color:rgba(117, 98, 44, 0.08);
+}
+
+.högerRätter button:active{
+    background-color:rgba(89, 74, 34, 0.08);
 }
 
 .allergier{
     margin-top: 30px;
     display: flex;
     flex-direction: column;
+}
+
+.allergier h2{
+    margin-left: 5px;
 }
 
 .allergier label{
@@ -148,10 +225,16 @@ h2{
     width: 95%;
     height: 30px;
     padding-left: 5px;
+    margin-top: 10px;
+}
+
+.sortera label{
+    font-size: 1.5rem;
 }
 
 .container{
-    width: 100%;
+    max-width: 180ch;
+    min-width: 70%;
 }
 
 .rätter section img{
@@ -170,7 +253,7 @@ h2{
 
 .cartMenu{
     display: block;
-    background-color: #c9a84c;
+    background-color: var(--guld);
     padding-left: 20px;
     padding-top: 20px;
     width: 500px;
@@ -230,8 +313,17 @@ h2{
 }
 
 footer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
     display: flex;
+    justify-items: center;
+    align-items:center ;  
     flex-direction: column;
+}
+
+footer p{
+    font-size: 1.6rem;
 }
 
 .buttonCon select{
@@ -248,7 +340,7 @@ footer{
 
 .sortera select{
     background-color: rgba(15,13,10,1);
-    border: 1px solid rgba(201,168,76,0.18);
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding-left: 10px;
     width: 100%;
@@ -259,7 +351,7 @@ footer{
     margin-top: 5px;
     width: 100%;
     height: 1px;
-    background-color: #c9a84c;
+    background-color: var(--guld);
 }
 
 .maträttAllergier{
@@ -272,11 +364,184 @@ footer{
 
     display: block;
     font-size: small;
-    background-color: rgba(201,168,76,0.18);
+    background-color: var(--bakgrund);
     text-align: center;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 10px;
+}
+
+
+.varukorgDiv{
+    width: 100%;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--bakgrund-mörk);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+
+    /* display: flex;
+    flex-direction: column;
+    flex:1;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start; */
+}
+
+.over{
+    height: 5rem;
+    background-color: rgba(201,168,76,0.08);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+/* 
+.over h2{
+} */
+
+.overLeft{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.overLeft p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--bakgrund-mörk);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+}
+
+.under{
+    background-color: rgba(201,168,76,0.08);
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 5rem;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.ordning{
+    margin-top: 25px;
+    
+}
+
+.ordning label{
+    margin-right: 25px;
+}
+
+.köttSort{
+    margin-top: 25px;
+}
+
+.köttSort h2{
+    margin-left: 5px;
+}
+
+.varukorgLista{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.varukorgLista p{
+    margin-left: 15px;
+}
+
+.varukorgLista section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--bakgrund-mörk);
+    border: 1px solid var(--border);
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.varukorgLista section h3{
+    font-size: 1.5rem;
+}
+
+.vänsterVarukorgRätt{
+    display: flex;
+    flex-direction: column;
+}
+
+.högerVarukorgRätt{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.högerVarukorgRätt button{
+    height: 3rem;
+    width: 4rem;
+    border: 1px solid var(--border);
+    background-color: rgba(201,168,76,0.08);
+    border-radius: 25px;
+    font-size: larger;
+    transition: background-color 0.1s ease;
+}
+
+.högerVarukorgRätt button:hover{
+    background-color: rgba(117, 98, 44, 0.08);
+}
+
+.högerVarukorgRätt button:active{
+    background-color: rgba(89, 74, 34, 0.08);
+}
+
+#tömVarukorgKnapp{
+    background-color: var(--bakgrund-mörk);
+    height: 3rem;
+    width: 4rem;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    transition: background-color 0.1s ease;
+}
+
+#tömVarukorgKnapp:hover{
+    background-color: #221d19;
+}
+
+#tömVarukorgKnapp:active{
+    background-color: #2b251f;
 }

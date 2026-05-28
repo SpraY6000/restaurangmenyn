@@ -3,192 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Välkommen till vår restaurang – bläddra i vår meny och beställ enkelt online.">
     <title>Restaurang</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body id="body">
 
-    <div class="cartMenu">
-        <button class="close">
-            <span>&#x2715;</span>
-        </button>
-        <p>Hejsan detta är din kundvagn</p>
-    </div>
-
     <header>
-        <img src="images/logo_placeholder.png" alt="Restaurang logga" class="imgLogo">
-        <img src="images/cart.png" alt="Varukorg" class="imgCart">
+        <img src="images/luckyducklogo.png" alt="Restaurang logga" class="imgLogo">
     </header>
     <main>
         <div class="container">
-            <h1 class="vårMenyText">Vår meny</h1>
+            <h1 class="vårMenyText" id="vårMenyText">Vår meny</h1>
             <div class="filter">
                 <h2 id="filterlangtitle">Språk</h2>
-                
-
                 <div class="sprak">
-                    <input type="radio" value="engelska" id="engelska" name="språk">
-                    <label for="engelska">English</label>
+                    
+                    <input type="radio" value="engelska" name="språk" id="engelskaKnapp">
+                    <label for="engelskaKnapp" id="englishLabel">English</label>
 
-                    <input type="radio" value="Svenska" id="svenska" name="språk" checked>
-                    <label for="svenska">Svenska</label>
+                    <input type="radio" value="Svenska" name="språk" checked id="svenskaKnapp">
+                    <label for="svenskaKnapp" id="swedishLabel">Svenska</label>
                 </div>
-
+                <div>
+                    
+                </div>
                 <div class="allergier">
-                    <h2>Allergier</h2>
+                    <h2 id="allergiesText">Allergier</h2>
                     <div>
                         <input type="checkbox" name="allergier" id="gluten">
-                        <label for="gluten">Gluten (inkluderad)</label>
+                        <label for="gluten" id="glutenLabel">Gluten</label>
                     </div>
                     
                     <div>
                         <input type="checkbox" name="allergier" id="laktos">
-                        <label for="laktos">Laktos (inkluderad)</label>
+                        <label for="laktos" id="laktosLabel">Laktos</label>
                     </div>
 
                     <div>
-                        <input type="checkbox" name="allergier" id="nötter">
-                        <label for="nötter">Nötter (inkluderad)</label>
+                        <input type="checkbox" name="allergier" id="ägg">
+                        <label for="ägg" id="äggLabel" >Ägg</label>
+                    </div>
+                    
+                </div>
+
+                <div class="köttSort">
+                    <h2 id="köttSorterText">Köttsorter</h2>
+
+                    <div>
+                        <input type="checkbox" name="köttTyper" id="vegetarisk">
+                        <label for="vegetarisk" id="vegetariskLabel">Vegetarisk</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="köttTyper" id="nötkött">
+                        <label for="nötkött" id="nötLabel">Nöt</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="köttTyper" id="fläsk">
+                        <label for="fläsk" id="fläskLabel">Fläsk</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="köttTyper" id="fisk">
+                        <label for="fisk" id="fiskLabel">Fisk</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="köttTyper" id="kyckling">
+                        <label for="kyckling" id="kycklingLabel">Kyckling</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="köttTyper" id="skaldjur">
+                        <label for="skaldjur" id="skaldjurLabel">Skaldjur</label>
                     </div>
                     
                 </div>
 
                 <div class="sortera">
-                    <h2>Sortera</h2>
-                    <select>
-                        <option value="standard">Standard</option>
-                        <option value="nyast">Nyast</option>
-                        <option value="äldst">Äldst</option>
-                        <option value="pris">Pris</option>
+                    <label for="order" id="sorteraLabel">Sortera</label>
+                    <select id="order">
+                        <option value="standard" id="standardOptionLabel">Standard</option>
+                        <option value="pris" id="prisOptionLabel">Pris</option>
                     </select>
+                </div>
+
+                <div class="ordning">
+                    <h2 id="ordningText">Ordning</h2>
+                    <input type="radio" name="ordning" id="fallandeRadio" checked>
+                    <label for="fallandeRadio" id="fallandeLabel">Fallande</label>
+                    <input type="radio" name="ordning" id="stigandeRadio">
+                    <label for="stigandeRadio" id="stigandeLabel">Stigande</label>
                 </div>
                 
             </div>
 
 
-            <h3 >Rätter</h3>
+            <h3 id="rätterLabel">Rätter</h3>
             <div class="breaker"></div>  
 
 
             <div class="rätter">
-                <section>
-                    <h3>Spagetti och köttfärssås</h3>
-                    <p class="rättBeskrivning">Spagetti och köttfärssås</p>
-                    <!-- <ul id="allergenLista">
-                        <li>
-                            <p>Gluten</p>
-                        </li>
-                        <li>
-                            <p>Nöt/Fläskkött</p>
-                        </li>
-                        <li>
-                            <p>Laktos (lite)</p>
-                        </li>
-                    </ul> -->
-                    <div class="maträttAllergier">
-                        <span>Laktos</span>
-                        <span>Gluten</span>
-                        <span>Nöt/Fläsk</span>
+                <!-- <section>
+                    <div class="vänsterRätter">
+                        <h3>Spagetti och köttfärssås</h3>
+                        <p class="rättBeskrivning">Spagetti och köttfärssås</p>
+                        <div class="maträttAllergier">
+                            <span>Laktos</span>
+                            <span>Gluten</span>
+                            <span>Nöt/Fläsk</span>
+                        </div>
+
+                        
                     </div>
-
-
-                    <!-- <div class="buttonCon">
-                        <button type="submit" class="addToCart">Add to cart</button>
-                        <label for="quantitySelect">Kvantitet:</label>
-                        <select name="" id="quantitySelect">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="4">5</option>
-                            <option value="4">6</option>
-                        </select>
-                    </div> -->
+                    <div class="högerRätter">
+                        <p class="priceText">149kr</p>
+                        <button id="addToCartButton">+</button>
+                    </div>
                     
-                </section>
-                <section>
-                    <h3>Pastasallad</h3>
-                    <ul id="allergenLista">
-                        <li>
-                            <p>Gluten</p>
-                        </li>
-                        <li>
-                            <p>Laktos</p>
-                        </li>
-                    </ul>
-                    <div class="buttonCon">
-                        <button type="submit" class="addToCart">Add to cart</button>
-                        <label for="quantitySelect">Kvantitet:</label>
-                        <select name="" id="quantitySelect">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="4">5</option>
-                            <option value="4">6</option>
-                        </select>
+                </section> -->
+            </div>
+
+            <div class="varukorgDiv">
+                <div class="over">
+                    <div class="overLeft">
+                        <h2 id="varukorgText">Varukorg</h2>
+                        <p id="antalIVarukorg">0</p>        
                     </div>
-                </section>
-                <section>
-                    <h3>Lasagne</h3>
-                    <ul id="allergenLista">
-                        <li>
-                            <p>Gluten</p>
-                        </li>
-                        <li>
-                            <p>Nöt/Fläskkött</p>
-                        </li>
-                        <li>
-                            <p>Laktos</p>
-                        </li>
-                    </ul>
-                    <div class="buttonCon">
-                        <button type="submit" class="addToCart">Add to cart</button>
-                        <label for="quantitySelect">Kvantitet:</label>
-                        <select name="" id="quantitySelect">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="4">5</option>
-                            <option value="4">6</option>
-                        </select>
-                    </div>
-                </section>
-                <section>
-                    <h3>Spagetti och köttfärssås</h3>
-                    <ul id="allergenLista">
-                        <li>
-                            <p>Gluten</p>
-                        </li>
-                        <li>
-                            <p>Nöt/Fläskkött</p>
-                        </li>
-                        <li>
-                            <p>Laktos (lite)</p>
-                        </li>
-                    </ul>
-                    <div class="buttonCon">
-                        <button type="submit" class="addToCart">Add to cart</button>
-                        <label for="quantitySelect">Kvantitet:</label>
-                        <select name="" id="quantitySelect">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="4">5</option>
-                            <option value="4">6</option>
-                        </select>
-                    </div>
-                </section>
+                    
+                    <button id="tömVarukorgKnapp">Töm</button>
+                </div>
+
+                <!-- Kommer ändras när det läggs till i listan -->
+                <div class="varukorgLista">
+                    <p id="tomVarukorgText">Din varukorg är tom</p>
+                </div>
+
+                <div class="under">
+                    <p id="totaltLabel">TOTALT</p>
+                    <p id="totalKostnad">0 kr</p>
+                </div>
+
             </div>
         </div>
     </main>
     <footer>
-        <p>* Restaurang *placeholder*</p>
-        <p>* Sedan 2026</p>
-        <a href="kontakt.html">Kontakt</a>
+        <p id="luckyDuckRubrikText">* Restaurang Lucky Duck</p>
+        <p id="sedanText">* Sedan 2026</p>
     </footer>
 </body>
 </html>
